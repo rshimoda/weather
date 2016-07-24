@@ -10,7 +10,10 @@
 
 @interface Forecast : NSObject
 
-@property NSString *forecast;
-@property NSString *temperature;
+@property NSString *currentState;
+@property NSString *currentTemperature;
+
+- (void)encodeWithCoder:(NSCoder *)encoder;
+- (id)initWithCoder:(NSCoder *)decoder;
 
 @end

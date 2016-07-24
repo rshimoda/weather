@@ -6,9 +6,11 @@
 	//  Copyright © 2016 Sergey Popov. All rights reserved.
 	//
 
-#import <UIKit/UIKit.h>
 
-@interface WeatherTableViewController : UITableViewController
+#import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
+
+@interface WeatherTableViewController: UITableViewController <CLLocationManagerDelegate>
 
 - (IBAction)addCity:(UIBarButtonItem *)sender;
 

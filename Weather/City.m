@@ -10,4 +10,19 @@
 
 @implementation City
 
+- (void)encodeWithCoder:(NSCoder *)encoder {
+		//Encode properties, other class variables, etc
+	[encoder encodeObject:self.name forKey:@"name"];
+	[encoder encodeObject:self.forecast forKey:@"forecast"];
+}
+
+- (id)initWithCoder:(NSCoder *)decoder {
+	if((self = [super init])) {
+			//decode properties, other class vars
+		self.name = [decoder decodeObjectForKey:@"name"];
+		self.forecast = [decoder decodeObjectForKey:@"forecast"];
+	}
+	return self;
+}
+
 @end

@@ -319,6 +319,7 @@
 				A50F32FD1D423C580019E6A8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

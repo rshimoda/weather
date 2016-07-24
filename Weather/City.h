@@ -7,12 +7,14 @@
 	//
 
 #import <Foundation/Foundation.h>
+#import "Forecast.h"
 
 @interface City : NSObject
 
 @property NSString *name;
-@property NSString *temperature;
-@property NSString *currentWeatherForecast;
-@property NSString *weatherImageUrl;
+@property Forecast *forecast;
+
+- (void)encodeWithCoder:(NSCoder *)encoder;
+- (id)initWithCoder:(NSCoder *)decoder;
 
 @end
