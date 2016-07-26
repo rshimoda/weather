@@ -16,6 +16,13 @@
 		A50F33031D423FE90019E6A8 /* CityTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A50F33021D423FE90019E6A8 /* CityTableViewCell.m */; };
 		A50F33081D424DA50019E6A8 /* Forecast.m in Sources */ = {isa = PBXBuildFile; fileRef = A50F33071D424DA50019E6A8 /* Forecast.m */; };
 		A50F33091D42622F0019E6A8 /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = A50F33041D42469C0019E6A8 /* City.m */; };
+		A5561A291D463ED000760244 /* PartlyCloudy.mov in Resources */ = {isa = PBXBuildFile; fileRef = A5561A281D463ED000760244 /* PartlyCloudy.mov */; };
+		A5561A2B1D463ED800760244 /* Cloudy.mov in Resources */ = {isa = PBXBuildFile; fileRef = A5561A2A1D463ED800760244 /* Cloudy.mov */; };
+		A5E5E9371D465B5B00EA5AD8 /* RainWithThunderstorm.mov in Resources */ = {isa = PBXBuildFile; fileRef = A5E5E9361D465B5B00EA5AD8 /* RainWithThunderstorm.mov */; };
+		A5E5E9401D47D1DE00EA5AD8 /* Sunny.mov in Resources */ = {isa = PBXBuildFile; fileRef = A5E5E93C1D47D1DE00EA5AD8 /* Sunny.mov */; };
+		A5E5E9411D47D1DE00EA5AD8 /* MostlySunny.mov in Resources */ = {isa = PBXBuildFile; fileRef = A5E5E93D1D47D1DE00EA5AD8 /* MostlySunny.mov */; };
+		A5E5E9421D47D1DE00EA5AD8 /* MostlyCloudy.mov in Resources */ = {isa = PBXBuildFile; fileRef = A5E5E93E1D47D1DE00EA5AD8 /* MostlyCloudy.mov */; };
+		A5E5E9431D47D1DE00EA5AD8 /* LightRain.mov in Resources */ = {isa = PBXBuildFile; fileRef = A5E5E93F1D47D1DE00EA5AD8 /* LightRain.mov */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +42,13 @@
 		A50F33071D424DA50019E6A8 /* Forecast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Forecast.m; sourceTree = "<group>"; };
 		A50F330A1D4263780019E6A8 /* Forecast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Forecast.h; sourceTree = "<group>"; };
 		A50F330B1D4263B80019E6A8 /* City.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = City.h; sourceTree = "<group>"; };
+		A5561A281D463ED000760244 /* PartlyCloudy.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = PartlyCloudy.mov; sourceTree = "<group>"; };
+		A5561A2A1D463ED800760244 /* Cloudy.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = Cloudy.mov; sourceTree = "<group>"; };
+		A5E5E9361D465B5B00EA5AD8 /* RainWithThunderstorm.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = RainWithThunderstorm.mov; sourceTree = "<group>"; };
+		A5E5E93C1D47D1DE00EA5AD8 /* Sunny.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = Sunny.mov; sourceTree = "<group>"; };
+		A5E5E93D1D47D1DE00EA5AD8 /* MostlySunny.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = MostlySunny.mov; sourceTree = "<group>"; };
+		A5E5E93E1D47D1DE00EA5AD8 /* MostlyCloudy.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = MostlyCloudy.mov; sourceTree = "<group>"; };
+		A5E5E93F1D47D1DE00EA5AD8 /* LightRain.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = LightRain.mov; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +90,7 @@
 				A50F330A1D4263780019E6A8 /* Forecast.h */,
 				A50F33041D42469C0019E6A8 /* City.m */,
 				A50F330B1D4263B80019E6A8 /* City.h */,
+				A5561A231D4638A200760244 /* Images */,
 				A50F32E71D423C580019E6A8 /* Supporting Files */,
 			);
 			path = Weather;
@@ -92,6 +107,20 @@
 				A50F32E81D423C580019E6A8 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A5561A231D4638A200760244 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				A5E5E93C1D47D1DE00EA5AD8 /* Sunny.mov */,
+				A5E5E93D1D47D1DE00EA5AD8 /* MostlySunny.mov */,
+				A5E5E93E1D47D1DE00EA5AD8 /* MostlyCloudy.mov */,
+				A5E5E93F1D47D1DE00EA5AD8 /* LightRain.mov */,
+				A5561A281D463ED000760244 /* PartlyCloudy.mov */,
+				A5561A2A1D463ED800760244 /* Cloudy.mov */,
+				A5E5E9361D465B5B00EA5AD8 /* RainWithThunderstorm.mov */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,9 +181,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5561A2B1D463ED800760244 /* Cloudy.mov in Resources */,
+				A5E5E9431D47D1DE00EA5AD8 /* LightRain.mov in Resources */,
 				A50F32F71D423C580019E6A8 /* LaunchScreen.storyboard in Resources */,
 				A50F32F41D423C580019E6A8 /* Assets.xcassets in Resources */,
 				A50F32F21D423C580019E6A8 /* Main.storyboard in Resources */,
+				A5E5E9421D47D1DE00EA5AD8 /* MostlyCloudy.mov in Resources */,
+				A5E5E9411D47D1DE00EA5AD8 /* MostlySunny.mov in Resources */,
+				A5561A291D463ED000760244 /* PartlyCloudy.mov in Resources */,
+				A5E5E9401D47D1DE00EA5AD8 /* Sunny.mov in Resources */,
+				A5E5E9371D465B5B00EA5AD8 /* RainWithThunderstorm.mov in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,6 +12,7 @@
 #import "Forecast.h"
 
 @import CoreLocation;
+@import AVFoundation;
 
 @interface WeatherTableViewController () <CLLocationManagerDelegate>
 
@@ -33,8 +34,9 @@ CLLocation *currentLocation;
 	[super viewDidLoad];
 	
 	defaults = [NSUserDefaults standardUserDefaults];
-	
+		
 	self.upToDate = NO;
+	[self setNeedsStatusBarAppearanceUpdate];
 	
 	self.cities = [[NSMutableArray alloc] init];
 	[self loadUserDefaults];
@@ -57,10 +59,8 @@ CLLocation *currentLocation;
 	self.refreshControl = [[UIRefreshControl alloc] init];
 	[self.refreshControl addTarget:self action:@selector(refresh) forControlEvents:UIControlEventValueChanged];
 	
-		//	self.cities = [NSMutableArray arrayWithArray:[self.defaults arrayForKey:@"cities"]];
-	
 	self.tableView.allowsMultipleSelectionDuringEditing = NO;
-	self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+		//	self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
 	
 		// Uncomment the following line to preserve selection between presentations.
 		// self.clearsSelectionOnViewWillAppear = NO;
@@ -70,8 +70,14 @@ CLLocation *currentLocation;
 	[self refresh];
 }
 
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+	return UIStatusBarStyleLightContent;
+}
+
 -(void)refresh {
 	self.upToDate = NO;
+//	[[NSNotificationCenter defaultCenter] removeObserver:self];
 	[self.locationManager startUpdatingLocation];
 }
 
@@ -93,11 +99,40 @@ CLLocation *currentLocation;
 		// Configure the cell...
 	
 	City *city =  self.cities[indexPath.row];
+	NSString *fileName = [city.forecast.currentState stringByReplacingOccurrencesOfString:@" " withString:@""];
+	NSURL *videoURL = [[NSBundle mainBundle] URLForResource:fileName withExtension:@"mov"]; // [city.forecast.currentState stringByReplacingOccurrencesOfString:@" " withString:@""]
 	
-	cell.cityName.text = city.name;
+	NSRange range = [city.name rangeOfString:@","];
+	if (range.length > 0) {
+		cell.cityName.text = [city.name substringToIndex:range.location];
+	} else {
+		cell.cityName.text = city.name;
+	}
 	cell.temperature.text = [city.forecast.currentTemperature stringByAppendingString:@"°"];
 	cell.forecast.text = city.forecast.currentState;
-	cell.backgroundImage.image = [UIImage imageNamed:[city.forecast.currentState stringByReplacingOccurrencesOfString:@" " withString:@""]]; //[UIImage animatedImageNamed:@"Sunny" duration:1.0f];
+	
+	if (videoURL != nil && (city.forecast.currentState != nil || city.forecast.currentState != cell.forecast.text)) {
+		AVPlayer *avPlayer = [AVPlayer playerWithURL:videoURL];
+		AVPlayerLayer *avPlayerLayer = [AVPlayerLayer playerLayerWithPlayer:avPlayer];
+		
+		avPlayerLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
+		avPlayer.volume = 0;
+		avPlayer.actionAtItemEnd = AVPlayerActionAtItemEndNone;
+		avPlayerLayer.frame = cell.contentView.bounds;
+		avPlayer.actionAtItemEnd = AVPlayerActionAtItemEndNone;
+		[[NSNotificationCenter defaultCenter] addObserver:self
+												 selector:@selector(playerItemDidReachEnd:)
+													 name:AVPlayerItemDidPlayToEndTimeNotification
+												   object:[avPlayer currentItem]];
+		
+		
+		cell.contentView.backgroundColor = [UIColor clearColor];
+		[cell.layer insertSublayer:avPlayerLayer atIndex:0];
+		[avPlayer seekToTime:kCMTimeZero];
+		[avPlayer play];
+	} else {
+		cell.backgroundImage.image = [UIImage imageNamed:[city.forecast.currentState stringByReplacingOccurrencesOfString:@" " withString:@""]]; //[UIImage animatedImageNamed:@"Sunny-" duration:1.0f];
+	}
 	
 	return cell;
 }
@@ -146,8 +181,12 @@ CLLocation *currentLocation;
 					   self.cities[0] = currentCity;
 					   
 					   if (!self.upToDate) {
-						   [self updateForecast];
-						   [self.tableView reloadData];
+						   dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0), ^{
+							   [self updateForecast];
+							   dispatch_async(dispatch_get_main_queue(), ^{
+								   [self.tableView reloadData];
+							   });
+						   });
 					   }
 					   self.upToDate = YES;
 				   }];
@@ -171,7 +210,7 @@ CLLocation *currentLocation;
 
 #pragma mark Add City
 
-- (IBAction)addCity:(UIBarButtonItem *)sender {
+- (IBAction)addCity:(UIButton *)sender {
 	UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Add a new city" message:@"" preferredStyle:UIAlertControllerStyleAlert];
 	[alertController addTextFieldWithConfigurationHandler:^(UITextField *textField) { textField.placeholder = @"Type city here";}];
 	[alertController addAction:[UIAlertAction actionWithTitle:@"Add City" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
@@ -185,6 +224,9 @@ CLLocation *currentLocation;
 	}]];
 	[alertController addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil]];
 	[self presentViewController:alertController animated:YES completion:nil];
+}
+
+- (IBAction)addLocation:(UIButton *)sender {
 }
 
 #pragma mark NSUserDefaults
@@ -258,5 +300,9 @@ CLLocation *currentLocation;
 		//	[self.tableView reloadData];
 }
 
+- (void)playerItemDidReachEnd:(NSNotification *)notification {
+	AVPlayerItem *p = [notification object];
+	[p seekToTime:kCMTimeZero];
+}
 
 @end

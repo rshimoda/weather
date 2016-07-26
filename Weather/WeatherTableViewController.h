@@ -12,6 +12,6 @@
 
 @interface WeatherTableViewController: UITableViewController <CLLocationManagerDelegate>
 
-- (IBAction)addCity:(UIBarButtonItem *)sender;
+- (IBAction)addCity:(UIButton *)sender;
 
 @end
