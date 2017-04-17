@@ -16,13 +16,13 @@
 		A50F33031D423FE90019E6A8 /* CityTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A50F33021D423FE90019E6A8 /* CityTableViewCell.m */; };
 		A50F33081D424DA50019E6A8 /* Forecast.m in Sources */ = {isa = PBXBuildFile; fileRef = A50F33071D424DA50019E6A8 /* Forecast.m */; };
 		A50F33091D42622F0019E6A8 /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = A50F33041D42469C0019E6A8 /* City.m */; };
-		A5561A291D463ED000760244 /* PartlyCloudy.mov in Resources */ = {isa = PBXBuildFile; fileRef = A5561A281D463ED000760244 /* PartlyCloudy.mov */; };
+		A5561A291D463ED000760244 /* Partlycloudy.mov in Resources */ = {isa = PBXBuildFile; fileRef = A5561A281D463ED000760244 /* Partlycloudy.mov */; };
 		A5561A2B1D463ED800760244 /* Cloudy.mov in Resources */ = {isa = PBXBuildFile; fileRef = A5561A2A1D463ED800760244 /* Cloudy.mov */; };
-		A5E5E9371D465B5B00EA5AD8 /* RainWithThunderstorm.mov in Resources */ = {isa = PBXBuildFile; fileRef = A5E5E9361D465B5B00EA5AD8 /* RainWithThunderstorm.mov */; };
+		A5E5E9371D465B5B00EA5AD8 /* Patchyrainpossible.mov in Resources */ = {isa = PBXBuildFile; fileRef = A5E5E9361D465B5B00EA5AD8 /* Patchyrainpossible.mov */; };
 		A5E5E9401D47D1DE00EA5AD8 /* Sunny.mov in Resources */ = {isa = PBXBuildFile; fileRef = A5E5E93C1D47D1DE00EA5AD8 /* Sunny.mov */; };
-		A5E5E9411D47D1DE00EA5AD8 /* MostlySunny.mov in Resources */ = {isa = PBXBuildFile; fileRef = A5E5E93D1D47D1DE00EA5AD8 /* MostlySunny.mov */; };
-		A5E5E9421D47D1DE00EA5AD8 /* MostlyCloudy.mov in Resources */ = {isa = PBXBuildFile; fileRef = A5E5E93E1D47D1DE00EA5AD8 /* MostlyCloudy.mov */; };
-		A5E5E9431D47D1DE00EA5AD8 /* LightRain.mov in Resources */ = {isa = PBXBuildFile; fileRef = A5E5E93F1D47D1DE00EA5AD8 /* LightRain.mov */; };
+		A5E5E9411D47D1DE00EA5AD8 /* Mostlysunny.mov in Resources */ = {isa = PBXBuildFile; fileRef = A5E5E93D1D47D1DE00EA5AD8 /* Mostlysunny.mov */; };
+		A5E5E9421D47D1DE00EA5AD8 /* Mostlycloudy.mov in Resources */ = {isa = PBXBuildFile; fileRef = A5E5E93E1D47D1DE00EA5AD8 /* Mostlycloudy.mov */; };
+		A5E5E9431D47D1DE00EA5AD8 /* Lightrainshower.mov in Resources */ = {isa = PBXBuildFile; fileRef = A5E5E93F1D47D1DE00EA5AD8 /* Lightrainshower.mov */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,13 +42,13 @@
 		A50F33071D424DA50019E6A8 /* Forecast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Forecast.m; sourceTree = "<group>"; };
 		A50F330A1D4263780019E6A8 /* Forecast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Forecast.h; sourceTree = "<group>"; };
 		A50F330B1D4263B80019E6A8 /* City.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = City.h; sourceTree = "<group>"; };
-		A5561A281D463ED000760244 /* PartlyCloudy.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = PartlyCloudy.mov; sourceTree = "<group>"; };
+		A5561A281D463ED000760244 /* Partlycloudy.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = Partlycloudy.mov; sourceTree = "<group>"; };
 		A5561A2A1D463ED800760244 /* Cloudy.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = Cloudy.mov; sourceTree = "<group>"; };
-		A5E5E9361D465B5B00EA5AD8 /* RainWithThunderstorm.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = RainWithThunderstorm.mov; sourceTree = "<group>"; };
+		A5E5E9361D465B5B00EA5AD8 /* Patchyrainpossible.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = Patchyrainpossible.mov; sourceTree = "<group>"; };
 		A5E5E93C1D47D1DE00EA5AD8 /* Sunny.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = Sunny.mov; sourceTree = "<group>"; };
-		A5E5E93D1D47D1DE00EA5AD8 /* MostlySunny.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = MostlySunny.mov; sourceTree = "<group>"; };
-		A5E5E93E1D47D1DE00EA5AD8 /* MostlyCloudy.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = MostlyCloudy.mov; sourceTree = "<group>"; };
-		A5E5E93F1D47D1DE00EA5AD8 /* LightRain.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = LightRain.mov; sourceTree = "<group>"; };
+		A5E5E93D1D47D1DE00EA5AD8 /* Mostlysunny.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = Mostlysunny.mov; sourceTree = "<group>"; };
+		A5E5E93E1D47D1DE00EA5AD8 /* Mostlycloudy.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = Mostlycloudy.mov; sourceTree = "<group>"; };
+		A5E5E93F1D47D1DE00EA5AD8 /* Lightrainshower.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = Lightrainshower.mov; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,7 +90,7 @@
 				A50F330A1D4263780019E6A8 /* Forecast.h */,
 				A50F33041D42469C0019E6A8 /* City.m */,
 				A50F330B1D4263B80019E6A8 /* City.h */,
-				A5561A231D4638A200760244 /* Images */,
+				A5561A231D4638A200760244 /* Backgrounds */,
 				A50F32E71D423C580019E6A8 /* Supporting Files */,
 			);
 			path = Weather;
@@ -109,18 +109,18 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		A5561A231D4638A200760244 /* Images */ = {
+		A5561A231D4638A200760244 /* Backgrounds */ = {
 			isa = PBXGroup;
 			children = (
 				A5E5E93C1D47D1DE00EA5AD8 /* Sunny.mov */,
-				A5E5E93D1D47D1DE00EA5AD8 /* MostlySunny.mov */,
-				A5E5E93E1D47D1DE00EA5AD8 /* MostlyCloudy.mov */,
-				A5E5E93F1D47D1DE00EA5AD8 /* LightRain.mov */,
-				A5561A281D463ED000760244 /* PartlyCloudy.mov */,
+				A5E5E93D1D47D1DE00EA5AD8 /* Mostlysunny.mov */,
+				A5E5E93E1D47D1DE00EA5AD8 /* Mostlycloudy.mov */,
+				A5E5E93F1D47D1DE00EA5AD8 /* Lightrainshower.mov */,
+				A5561A281D463ED000760244 /* Partlycloudy.mov */,
 				A5561A2A1D463ED800760244 /* Cloudy.mov */,
-				A5E5E9361D465B5B00EA5AD8 /* RainWithThunderstorm.mov */,
+				A5E5E9361D465B5B00EA5AD8 /* Patchyrainpossible.mov */,
 			);
-			name = Images;
+			name = Backgrounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,7 +149,7 @@
 		A50F32DC1D423C570019E6A8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Sergey Popov";
 				TargetAttributes = {
 					A50F32E31D423C570019E6A8 = {
@@ -182,15 +182,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5561A2B1D463ED800760244 /* Cloudy.mov in Resources */,
-				A5E5E9431D47D1DE00EA5AD8 /* LightRain.mov in Resources */,
+				A5E5E9431D47D1DE00EA5AD8 /* Lightrainshower.mov in Resources */,
 				A50F32F71D423C580019E6A8 /* LaunchScreen.storyboard in Resources */,
 				A50F32F41D423C580019E6A8 /* Assets.xcassets in Resources */,
 				A50F32F21D423C580019E6A8 /* Main.storyboard in Resources */,
-				A5E5E9421D47D1DE00EA5AD8 /* MostlyCloudy.mov in Resources */,
-				A5E5E9411D47D1DE00EA5AD8 /* MostlySunny.mov in Resources */,
-				A5561A291D463ED000760244 /* PartlyCloudy.mov in Resources */,
+				A5E5E9421D47D1DE00EA5AD8 /* Mostlycloudy.mov in Resources */,
+				A5E5E9411D47D1DE00EA5AD8 /* Mostlysunny.mov in Resources */,
+				A5561A291D463ED000760244 /* Partlycloudy.mov in Resources */,
 				A5E5E9401D47D1DE00EA5AD8 /* Sunny.mov in Resources */,
-				A5E5E9371D465B5B00EA5AD8 /* RainWithThunderstorm.mov in Resources */,
+				A5E5E9371D465B5B00EA5AD8 /* Patchyrainpossible.mov in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,8 +246,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -269,7 +271,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -290,8 +292,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -307,7 +311,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

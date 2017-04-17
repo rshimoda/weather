@@ -32,6 +32,8 @@ CLLocation *currentLocation;
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
+    
+//    NSLog(@"%@", )
 	
 	defaults = [NSUserDefaults standardUserDefaults];
 		
@@ -111,7 +113,7 @@ CLLocation *currentLocation;
 	cell.temperature.text = [city.forecast.currentTemperature stringByAppendingString:@"°"];
 	cell.forecast.text = city.forecast.currentState;
 	
-	if (videoURL != nil && (city.forecast.currentState != nil || city.forecast.currentState != cell.forecast.text)) {
+	if (videoURL != nil && city.forecast.currentState != nil) {
 		AVPlayer *avPlayer = [AVPlayer playerWithURL:videoURL];
 		AVPlayerLayer *avPlayerLayer = [AVPlayerLayer playerLayerWithPlayer:avPlayer];
 		
@@ -259,7 +261,7 @@ CLLocation *currentLocation;
 			
 				//-- Make URL request with server
 			NSHTTPURLResponse *response = nil;
-			NSString *requestString = [NSString stringWithFormat:@"https://api.worldweatheronline.com/premium/v1/weather.ashx?key=5ac27e6fc5644463968124227162207&q="];
+			NSString *requestString = [NSString stringWithFormat:@"https://api.worldweatheronline.com/premium/v1/weather.ashx?key=5e266c83810a4e93bd394859170703&q="];
 			requestString = [requestString stringByAppendingString:city.name];
 			requestString = [requestString stringByAppendingString:@"&date=today&num_of_days=1&show_comments=no&showlocaltime=yes&format=json"];
 			
